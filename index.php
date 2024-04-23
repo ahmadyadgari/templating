@@ -1,6 +1,6 @@
 <?php
 
-// 328/Week4/week_4/index.php
+// 328/Week4/templating/index.php
 // This is my CONTROLLER!
 
 // Turn on error reporting
@@ -14,10 +14,13 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 // Define a default route
-// https://ayadgari.greenriverdev.com/328/Week4/week_4/
+// https://ayadgari.greenriverdev.com/328/Week4/templating/
 
-$f3->route('GET /', function() {
+$f3->route('GET /', function($f3) {
     //echo '<h1>Hello Week4!</h1>';
+
+    // Add data to the Fat-Free "hive"
+    $f3->set('name', 'Reshad');
 
     // Render a view page
     $view = new Template();
